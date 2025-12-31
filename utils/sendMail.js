@@ -3,8 +3,9 @@ import nodemailer from 'nodemailer'
 import path from 'node:path'
 
 export async function sendMail(parsedJSON, outputFileName){
-    
+    console.log('before log')
     console.log(process.env.GMAIL_USER)
+    console.log('after log')
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
