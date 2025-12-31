@@ -23,6 +23,7 @@ export const handlePost = async function (req, res, __basedir) {
         await fs.writeFile(filePath, JSON.stringify(fileContent, null, 2))
 
         const outputFileName = `transaction-${parsedJSON.investmentTime.replaceAll('/', '').replaceAll(',', '').replaceAll(' ', '_').replaceAll(':', "_")}.pdf`
+        console.log('Enter createpdf')
         await createPdf(parsedJSON, __basedir, outputFileName)
 
         //await sendMail(parsedJSON, outputFileName)
