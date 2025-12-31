@@ -5,15 +5,7 @@ import path from 'node:path'
 
 export async function createPdf(parsedJSON, __basedir, outputFileName) {
     const { investmentTime, currentGoldPrice, investmentOz, investmentAmount } = parsedJSON
-    const browser = await puppeteer.launch({
-        headless: true,
-        // executablePath: '/opt/render/.cache/puppeteer/chrome/linux-143.0.7499.169/chrome-linux64/chrome',
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage'
-        ]
-    })
+    const browser = await puppeteer.launch()
     const page = await browser.newPage()
     
     const imagePath = path.join(__basedir, 'data', 'gold.png')
