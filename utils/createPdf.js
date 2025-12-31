@@ -21,7 +21,7 @@ export async function createPdf(parsedJSON, __basedir, outputFileName) {
         .replace("{{money}}", investmentAmount)
         .replace("{{header-img}}", imageSrc)
     
-    await page.setContent(html, { waitUntil: "networkidle0", timeout: 60000 })
+    await page.setContent(html, { waitUntil: "networkidle0"})
 
     
     
