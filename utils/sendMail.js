@@ -21,12 +21,12 @@ export async function sendMail(parsedJSON, outputFileName){
         to: "wengti@hotmail.com",
         subject: `[Gold digger] Transaction at ${parsedJSON.investmentTime}`,
         text: `Attached is a pdf file containing the detail of your latest investment.`,
-        attachments: [
-            {
-                filename: outputFileName,
-                path: path.join("data", outputFileName)
-            }
-        ]
+        // attachments: [
+        //     {
+        //         filename: outputFileName,
+        //         path: path.join("data", outputFileName)
+        //     }
+        // ]
     })
     console.log('Message sent:', info.messageId)
     // console.log(nodemailer.getTestMessageUrl(info))
