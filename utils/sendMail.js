@@ -4,7 +4,6 @@ import path from 'node:path'
 
 export async function sendMail(parsedJSON, outputFileName){
     console.log('before log')
-    console.log(process.env.GMAIL_USER)
     console.log(process.env.GMAIL_PASS)
     console.log('after log')
 
