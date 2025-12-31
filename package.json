@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "postinstall": "node node_modules/puppeteer/install.mjs"
+    "preinstall": "npm install puppeteer-core",
+    "postinstall": "npx puppeteer browsers install chrome"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
