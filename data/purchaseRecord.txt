@@ -1,0 +1,26 @@
+[
+  {
+    "investmentTime": "12/31/2025, 7:45:56 PM",
+    "currentGoldPrice": 709.59,
+    "investmentAmount": 800,
+    "investmentOz": 1.13
+  },
+  {
+    "investmentTime": "12/31/2025, 7:46:39 PM",
+    "currentGoldPrice": 976.11,
+    "investmentAmount": 2,
+    "investmentOz": 0
+  },
+  {
+    "investmentTime": "12/31/2025, 7:50:40 PM",
+    "currentGoldPrice": 944.82,
+    "investmentAmount": 200,
+    "investmentOz": 0.21
+  },
+  {
+    "investmentTime": "12/31/2025, 7:52:02 PM",
+    "currentGoldPrice": 871.81,
+    "investmentAmount": 302,
+    "investmentOz": 0.35
+  }
+]
