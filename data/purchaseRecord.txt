@@ -30,15 +30,9 @@
     "investmentOz": 1.03
   },
   {
-    "investmentTime": "1/1/2026, 1:34:48 PM",
-    "currentGoldPrice": 979.94,
-    "investmentAmount": 1234,
-    "investmentOz": 1.26
-  },
-  {
-    "investmentTime": "1/1/2026, 1:36:28 PM",
-    "currentGoldPrice": 1028.9,
-    "investmentAmount": 1234,
-    "investmentOz": 1.2
+    "investmentTime": "1/1/2026, 1:37:30 PM",
+    "currentGoldPrice": 921.31,
+    "investmentAmount": 12313,
+    "investmentOz": 13.36
   }
 ]
