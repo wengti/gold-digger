@@ -3,11 +3,7 @@ import nodemailer from 'nodemailer'
 import path from 'node:path'
 
 export async function sendMail(parsedJSON, outputFileName){
-    console.log('before log')
-    console.log(process.env.GMAIL_PASS)
-    console.log('after log')
 
-    console.log('before create')
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         // port: 587,
@@ -17,19 +13,18 @@ export async function sendMail(parsedJSON, outputFileName){
             pass: process.env.GMAIL_PASS
         }
     })
-    console.log('after create')
     
     const info = await transporter.sendMail({
         from: '"Weng Ti Wong" <wengti0608@gmail.com>',
-        to: "wengti@hotmail.com",
+        to: process.env.RECEIVE_USER,
         subject: `[Gold digger] Transaction at ${parsedJSON.investmentTime}`,
         text: `Attached is a pdf file containing the detail of your latest investment.`,
-        // attachments: [
-        //     {
-        //         filename: outputFileName,
-        //         path: path.join("data", outputFileName)
-        //     }
-        // ]
+        attachments: [
+            {
+                filename: outputFileName,
+                path: path.join("data", outputFileName)
+            }
+        ]
     })
     console.log('Message sent:', info.messageId)
     // console.log(nodemailer.getTestMessageUrl(info))
